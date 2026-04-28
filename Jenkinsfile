@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('Clone Source') {
             steps {
-                git 'https://github.com/s3VarnikaS/my_app'
+                git branch: 'main', 
+                    url: 'https://github.com/s3VarnikaS/my_app.git'
             }
         }
         stage('Build Docker Image') {
